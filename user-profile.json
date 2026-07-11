@@ -1,0 +1,11 @@
+{
+  "id": "user-001",
+  "name": "Suprit Naik",
+  "username": "SNprime24",
+  "email": "supritnaik100@gmail.com",
+  "bio": "Learning algorithms and data structures in C++.",
+  "location": "India",
+  "joined": "2026-07-11",
+  "skills": ["C++", "Algorithms", "Data Structures"],
+  "interests": ["sorting algorithms", "competitive programming"]
+}
