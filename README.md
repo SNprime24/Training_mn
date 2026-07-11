@@ -1,6 +1,6 @@
 # Training Media Net
 
-A small collection of classic sorting algorithms implemented in C++.
+Simple C++ implementations of classic sorting algorithms for learning and practice.
 
 ## Algorithms
 
