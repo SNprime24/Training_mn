@@ -1,0 +1,18 @@
+# Training Media Net
+
+A small collection of classic sorting algorithms implemented in C++.
+
+## Algorithms
+
+| File | Algorithm | Time Complexity |
+|------|-----------|-----------------|
+| `bubble_sort.cpp` | Bubble Sort | O(n²) |
+| `selection_sort.cpp` | Selection Sort | O(n²) |
+| `insertion_sort.cpp` | Insertion Sort | O(n²) |
+| `merge_sort.cpp` | Merge Sort | O(n log n) |
+
+Each file contains a standalone function that sorts an integer array in place (or via divide-and-conquer for merge sort).
+
+## Usage
+
+Include the desired file in your project and call the corresponding sort function on an integer array.
