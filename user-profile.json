@@ -7,5 +7,12 @@
   "location": "India",
   "joined": "2026-07-11",
   "skills": ["C++", "Algorithms", "Data Structures"],
-  "interests": ["sorting algorithms", "competitive programming"]
+  "interests": ["sorting algorithms", "competitive programming"],
+  "education": [
+    {
+      "degree": "Bachelor of Technology",
+      "school": "Indian Institute of Technology, Bhubaneswar",
+      "year": 2026
+    }
+  ]
 }
