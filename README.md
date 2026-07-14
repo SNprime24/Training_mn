@@ -11,6 +11,7 @@ C++ implementations of classic sorting algorithms for learning and practice.
 | `insertion_sort.h` / `insertion_sort.cpp` | Insertion Sort | O(n²) | `void insertion_sort(int arr[], int size)` |
 | `merge_sort.h` / `merge_sort.cpp` | Merge Sort | O(n log n) | `void merge_sort(int arr[], int left, int right)` |
 | `cycle_sort.h` / `cycle_sort.cpp` | Cycle Sort | O(n²) | `void cycle_sort(std::vector<int> &arr)` |
+| `heap_sort.h` / `heap_sort.cpp` | Heap Sort | O(n log n) | `void heap_sort(int arr[], int size)` |
 
 Each algorithm is split into a header (`.h`) for the public interface and an implementation file (`.cpp`).
 
@@ -18,7 +19,7 @@ Each algorithm is split into a header (`.h`) for the public interface and an imp
 
 Include the header in your code and link the corresponding `.cpp` file, or include the implementation directly for a single-file build.
 
-**Array-based sorts** (`bubble_sort`, `selection_sort`, `insertion_sort`):
+**Array-based sorts** (`bubble_sort`, `selection_sort`, `insertion_sort`, `heap_sort`):
 
 ```cpp
 #include "bubble_sort.h"
@@ -34,6 +35,15 @@ bubble_sort(data, 5);
 
 int data[] = {5, 2, 8, 1, 9};
 merge_sort(data, 0, 4);
+```
+
+**Heap sort** (in-place, array-based):
+
+```cpp
+#include "heap_sort.h"
+
+int data[] = {5, 2, 8, 1, 9};
+heap_sort(data, 5);
 ```
 
 **Cycle sort** (operates on a `std::vector`):

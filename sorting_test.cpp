@@ -10,6 +10,7 @@
 
 #include "bubble_sort.cpp"
 #include "cycle_sort.cpp"
+#include "heap_sort.cpp"
 #include "insertion_sort.cpp"
 #include "merge_sort.cpp"
 #include "selection_sort.cpp"
@@ -149,13 +150,14 @@ int main() {
     TestStats stats;
 
     std::cout << "=== Sorting Algorithm Validation ===\n";
-    std::cout << "Algorithms: bubble_sort, selection_sort, insertion_sort, merge_sort, cycle_sort\n";
+    std::cout << "Algorithms: bubble_sort, selection_sort, insertion_sort, merge_sort, cycle_sort, heap_sort\n";
     std::cout << "Test cases: " << tests.size() << "\n\n";
 
     const std::pair<std::string, void (*)(int[], int)> array_sorters[] = {
         {"bubble_sort", bubble_sort},
         {"selection_sort", selection_sort},
         {"insertion_sort", insertion_sort},
+        {"heap_sort", heap_sort},
     };
 
     for (const auto &sorter : array_sorters) {
