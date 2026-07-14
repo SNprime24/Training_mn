@@ -9,6 +9,7 @@ void cycle_sort(std::vector<int> &arr) {
         int item = arr[i];
         int pos = i;
 
+        // Count how many elements to the right are smaller than the current item.
         for (int j = i + 1; j < size; j++) {
             if (arr[j] < item) {
                 pos++;
@@ -16,15 +17,17 @@ void cycle_sort(std::vector<int> &arr) {
         }
 
         if (pos == i) {
-            continue;
+            continue;  // Item is already in its correct position.
         }
 
+        // Skip duplicate values so each element lands in a unique slot.
         while (item == arr[pos]) {
             pos++;
         }
 
         std::swap(item, arr[pos]);
 
+        // Continue the cycle until the displaced value returns to index i.
         while (pos != i) {
             pos = i;
             for (int j = i + 1; j < size; j++) {

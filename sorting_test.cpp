@@ -1,3 +1,7 @@
+// Validation harness for all sorting algorithms in this project.
+// Implementation files are included directly so the suite builds as a single translation unit:
+//   g++ -std=c++17 sorting_test.cpp -o build/sorting_test.exe
+
 #include <algorithm>
 #include <cstdlib>
 #include <iostream>
@@ -108,6 +112,7 @@ std::vector<TestCase> build_test_cases() {
         {"negative numbers", {-5, 10, -3, 0, -8, 7, -1}},
     };
 
+    // Fixed seed keeps random and large cases reproducible across runs.
     std::srand(42);
 
     std::vector<int> random_array;

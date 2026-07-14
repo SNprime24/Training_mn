@@ -4,6 +4,7 @@ void merge(int arr[], int left, int mid, int right) {
     int left_size = mid - left + 1;
     int right_size = right - mid;
 
+    // Temporary buffers hold copies of the two sorted halves.
     int left_arr[left_size];
     int right_arr[right_size];
 
@@ -26,6 +27,7 @@ void merge(int arr[], int left, int mid, int right) {
         }
     }
 
+    // Copy any remaining elements from the half that was not exhausted.
     while (i < left_size) {
         arr[k++] = left_arr[i++];
     }
