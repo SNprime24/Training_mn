@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub User Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>GitHub User Explorer</h1>
+      <p>Enter a username to fetch profile, followers, following, and repositories.</p>
+    </header>
+
+    <form id="search-form" class="search-panel">
+      <input
+        id="username"
+        type="text"
+        placeholder="e.g. octocat"
+        autocomplete="off"
+        required
+      />
+      <button id="submit-btn" type="submit">Search</button>
+    </form>
+
+    <div id="status" class="status" role="alert"></div>
+
+    <main id="results">
+      <section id="profile" class="profile-card"></section>
+
+      <section class="section">
+        <h3>Followers</h3>
+        <div class="table-wrap">
+          <table id="followers-table">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Type</th>
+                <th>Profile</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Following</h3>
+        <div class="table-wrap">
+          <table id="following-table">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Type</th>
+                <th>Profile</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Repositories</h3>
+        <div class="table-wrap">
+          <table id="repos-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Language</th>
+                <th>Stars</th>
+                <th>Forks</th>
+                <th>Visibility</th>
+                <th>Updated</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="githubApiClient.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
