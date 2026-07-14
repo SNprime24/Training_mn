@@ -25,8 +25,8 @@ void cycle_sort(vector<int> &arr) {
     }
 }
 
-int main() {
-    vector<int> arr = {20, 40, 50, 10, 30};
-    cycle_sort(arr);
-    for (int x : arr) cout << x << " ";
-}
+// int main() {
+//     vector<int> arr = {20, 40, 50, 10, 30};
+//     cycle_sort(arr);
+//     for (int x : arr) cout << x << " ";
+// }
