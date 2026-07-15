@@ -1,0 +1,28 @@
+name: Sorting Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  sorting-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t sorting-test .
+
+      - name: Run sorting test suite
+        run: |
+          set -euo pipefail
+          docker run --rm sorting-test | tee test-output.txt
+
+      - name: Verify all tests passed
+        run: |
+          set -euo pipefail
+          grep -q "Passed: 48" test-output.txt
+          grep -q "Failed: 0" test-output.txt
+          echo "All 48 sorting tests passed."
