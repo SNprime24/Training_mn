@@ -1,0 +1,11 @@
+.git
+.gitignore
+.vscode
+build
+**/*.exe
+Learning API-client
+Library Management System
+user-profile.json
+README.md
+Dockerfile
+.dockerignore
